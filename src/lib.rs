@@ -1,10 +1,16 @@
 use std::{error::Error,fs};
-
+use colored::Colorize;
 
 pub fn run(config: Config) -> Result<(), Box<dyn Error>>{
     let contents = fs::read_to_string(config.filename)?;
     for line in search(&config.query, &contents){
-        println!("{}",line)
+        for word in line.split(" "){
+            if word.contains(&config.query){
+                print!("{} ",format!("{}",word.red()));
+            } else {
+                print!("{} ",word);
+            }
+        }
     }
     Ok(())
 }
