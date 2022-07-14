@@ -1,1 +1,1 @@
-/home/victor/git/rust/minigrep/target/debug/libminigrep.rlib: /home/victor/git/rust/minigrep/src/lib.rs
+D:\Gits\rustprojects\minigrep\target\debug\libminigrep.rlib: D:\Gits\rustprojects\minigrep\src\lib.rs
